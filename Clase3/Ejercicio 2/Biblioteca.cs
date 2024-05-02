@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Clase3.Ejercicio_2
 {
-    public class Biblioteca
+    public class Biblioteca : IBiblioteca
     {
         public List<string> Libros { get; set; }
 
@@ -27,7 +27,15 @@ namespace Clase3.Ejercicio_2
                 "La sombra del viento"
             };
         }
-        
 
+        public void ObtenerLibros()
+        {
+            Console.WriteLine("Lista de libros.");
+
+            foreach (string l in Libros)
+            {
+                Console.WriteLine($"Libro: {l}");
+            }
+        }
     }
 }
